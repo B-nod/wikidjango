@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiMarried</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assests/css/wiki.css">
+    <link rel="shortcut icon" href="assests/img/logo-small.png" type="image/x-icon">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <style>
+          #mobile-menu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: white;
+        z-index: 10;
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="flex justify-between items-center shadow-xl p-4">
+            <div class="navlogo md:ml-8 lg:ml-20">
+                <img src="assests/img/logo-small.png" alt="navlogo" class="w-24 animate-bounce">
+            </div>
+            <div class="hidden md:block">
+                <ul class="flex justify-evenly text-sm">
+                    <li><a href="index.html" class="pr-5 hover:font-bold hover:text-red-700">Home</a></li>
+                    <li><a href="celebrity.html" class="pr-5 hover:font-bold hover:text-red-700">Celebrity Gossip</a></li>
+                    <li><a href="entertainment.html" class="pr-5 hover:font-bold hover:text-red-700">Entertainment</a></li>
+                    <li><a href="net.html" class="pr-5 hover:font-bold hover:text-red-700">Net Worth</a></li>
+                    <li><a href="salary.html" class="pr-5 hover:font-bold hover:text-red-700">Salary</a></li>
+                    <li><a href="wiki.html" class="pr-5 hover:font-bold hover:text-red-700">Wiki</a></li>
+                    <li><a href="biography.html" class="pr-5 hover:font-bold hover:text-red-700">Biography</a></li>
+                    <li><a href="about.html" class="pr-5 hover:font-bold hover:text-red-700">About</a></li>
+                    <li><a href="contact.html" class="lg:pr-20 md:pr-5 hover:font-bold hover:text-red-700">Contact</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <ul class="text-sm ps-2 pt-4 sidebar">
+                <a href="#" onclick="hideNavbar()" class="absolute top-2 right-2" id="times">
+                    <i class="fas fa-times-square"></i>
+                </a>
+                <li><a href="index.html" class="p-3 inline-block font-bold text-red-700">Home</a></li>
+                <li><a href="celebrity.html" class="p-3 inline-block">Celebrity Gossip</a></li>
+                <li><a href="entertainment.html" class="p-3 inline-block">Entertainment</a></li>
+                <li><a href="net.html" class="p-3 inline-block">Net Worth</a></li>
+                <li><a href="salary.html" class="p-3 inline-block">Salary</a></li>
+                <li><a href="wiki.html" class="p-3 inline-block">Wiki</a></li>
+                <li><a href="biography.html" class="p-3 inline-block">Biography</a></li>
+                <li><a href="about.html" class="p-3 inline-block">About</a></li>
+                <li><a href="contact.html" class="p-3 inline-block">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+ 
+
+   {% block main_content %}
+   {% endblock %}
+
+    <!-- footer part -->
+    <footer class="bg-white py-4">
+        <nav class="flex flex-col md:flex-row justify-between items-center">
+            <div class="navlogo md:ms-28 my-4">
+                <img src="assests/img/logo-small.png" alt="navlogo" class="w-24 animate-bounce">
+            </div>
+            <ul class="flex flex-wrap pe-2 justify-evenly text-sm">
+                <li><a href="index.html" class="pe-2 hover:font-bold hover:text-red-700">Home</a></li>
+                <li><a href="celebrity.html" class="pe-2 hover:font-bold hover:text-red-700">Celebrity Gossip</a></li>
+                <li><a href="entertainment.html" class="pe-2 hover:font-bold hover:text-red-700">Entertainment</a></li>
+                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700">Net Worth</a></li>
+                <li><a href="salary.html" class="pe-2 hover:font-bold hover:text-red-700">Salary</a></li>
+                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700">Wiki</a></li>
+                <li><a href="biography.html" class="pe-2 hover:font-bold hover:text-red-700">Biography</a></li>
+                <li><a href="about.html" class="pe-2 hover:font-bold hover:text-red-700">About</a></li>
+                <li><a href="contact.html" class="pe-2 hover:font-bold hover:text-red-700">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-3">
+            <p class="text-gray-600 text-sm m-5 md:ms-20 text-center md:text-left">&copy; 2023 All Rights Reserved. | <a href="#" class="text-gray-600 hover:text-gray-800">Disclaimer</a> | <a href="#" class="text-gray-600 hover:text-gray-800">Copyright Terms & Conditions</a></p>
+
+            <p class="text-gray-600 text-sm m-5 md:ms-20 text-center md:text-left">By using our website, you agree to our <a href="#" class="text-gray-600 hover:text-gray-800">Terms of Use</a> and <a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                <br>
+                Powered solely by code. Crafted by <a href="#" class="text-gray-600 hover:text-gray-800">Creative Content Limited</a>
+                <br>
+                Designed by: <a href="#" class="text-gray-600 font-bold hover:text-gray-800">Binod Tamang</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('times').addEventListener('click', ()=>{
+            let mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('hidden');
+        })
+    </script>
+</body>
+
+</html>
