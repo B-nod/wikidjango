@@ -3,4 +3,5 @@ from .views import *
 
 urlpatterns = [
     path('', admin_page, name="adminpage"),
+    path('bloglist', bloglist, name="bloglist"),
 ]
