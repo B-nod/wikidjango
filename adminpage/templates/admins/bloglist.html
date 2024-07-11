@@ -29,8 +29,51 @@
           <h3 class="card-title">jsGrid</h3>
         </div>
         <!-- /.card-header -->
-        <div class="card-body">
-          <div id="jsGrid1"></div>
+        <div class="card-body" style="overflow-x: auto;">
+          <table class="table table-bordered" style="min-width: 500px;">
+            <tr>
+                <th>Blog Title</th>
+                <th>Url Title</th>
+                <th>Blog Author</th>
+                <th>DOD</th>
+                <th>Net Worth</th>
+                <th>Height</th>
+                <th>Married</th>
+                <th>Blog Description</th>
+                <th>Published Date</th>
+                <th>File Name</th>
+                <th>Categories</th>
+                <th>Page Title</th>
+                <th>Visitor</th>
+                <th>Meta Keyword</th>
+                <th>Meta Description</th>
+                <th>Action</th>
+            </tr>
+            {% for b in blog%}
+            <tr>
+                <td>{{b.blog_title}}</td>
+                <td>{{b.urltitle}}</td>
+                <td>{{b.blog_author}}</td>
+                <td>{{b.date_of_birth}}</td>
+                <td>{{b.networth}}</td>
+                <td>{{b.height}}</td>
+                <td>{{b.married}}</td>
+                <td>{{b.blog_description}}</td>
+                <td>{{b.blog_published_date}}</td>
+                <td>{{b.filename}}</td>
+                <td>{{b.categories}}</td>
+                <td>{{b.pagetitle}}</td>
+                <td>{{b.visitor}}</td>
+                <td>{{b.metakeyword}}</td>
+                <td>{{b.metadescription}}</td>
+                <td>
+                    <i class="fas fa-pen-square" style="font-size: 30px;"></i>
+                    &nbsp; 
+                    <i class="fas fa-trash-alt fs-3" style="font-size: 30px;"></i>
+                </td>
+            </tr>
+            {% endfor %}
+          </table>
         </div>
         <!-- /.card-body -->
       </div>
