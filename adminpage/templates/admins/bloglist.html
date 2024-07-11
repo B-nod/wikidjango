@@ -1,3 +1,19 @@
+<style>
+     .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination .step-links a {
+        margin: 0 5px;
+    }
+
+    .alert {
+        margin-top: 20px;
+    }
+</style>
+
 {% extends 'admins/index.html'%}
 {% block title%}
 <title>Wiki Married Admin | Dashboard</title>
@@ -74,6 +90,19 @@
             </tr>
             {% endfor %}
           </table>
+
+          <div class="pagination">
+            <span class="step-links">
+                {% for i in page_range %}
+                <a href="?page={{ i }}">{{ i }}</a>
+                {% endfor %}
+                <p>
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                </p>
+            </span>
+        </div>
         </div>
         <!-- /.card-body -->
       </div>
