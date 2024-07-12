@@ -7,15 +7,15 @@ def admin_page(request):
     return render(request, 'admins/dashboard.html')
 
 def bloglist(request):
+  
     blog_list = Blog.objects.all().order_by('-id')
-    paginator = Paginator(blog_list, 10)
-    page_number = request.GET.get("page")
+    paginator = Paginator(blog_list, 20)  # Show 20 blogs per page
+
+    page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    page_range = range(1, paginator.num_pages + 1)
+
     context = {
         'blog':blog_list,
-
-        'page_obj':page_obj,
-        'page_range':page_range
+        'page_obj': page_obj,
     }
     return render(request, 'admins/bloglist.html', context)
