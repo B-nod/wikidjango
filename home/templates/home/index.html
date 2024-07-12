@@ -12,6 +12,7 @@
           
             <div class="grid md:grid-cols-0 lg:grid-cols-3 gap-5">
                 <!-- Main Article -->
+                 {% for r in recent%}
                 <div class="md:col-span-0 lg:col-span-2 bg-white rounded-lg">
                     <img src="{% static 'assests/img/Kate Bock wiki.jpg'%}" alt="Main Article Image"
                         class="w-full h-72 object-cover rounded-lg mb-5">
@@ -19,8 +20,7 @@
                         <span
                             class="text-blue-700 text-lg md:text-xs font-semibold mb-5 bg-blue-100 px-3 py-2 rounded-full tracking-wide">Entertainment</span>
                         <a href="another.html">
-                            <h2 class="text-3xl font-semibold my-3 hover:text-blue-700">Kate Bock Biography Wiki, Married, Net worth, Height,
-                                Dating, Family</h2>
+                            <h2 class="text-3xl font-semibold my-3 hover:text-blue-700">{{r.blog_title}}</h2>
                         </a>
                         <p class="text-gray-700 mb-3 text-justify md:text-sm">Kate Bock is a popular model and actress
                             who made her fame from her appearance in the Sports Illustrated Swimsuit Issue from the year
@@ -33,6 +33,7 @@
                     </div>
                     
                 </div>
+                {% endfor %}
                 <!-- Side Articles -->
            
                 <div class="space-y-6">
