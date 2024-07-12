@@ -1,0 +1,18 @@
+
+
+{% extends 'admins/index.html'%}
+{% load crispy_form_tags %}
+{% block title%}
+<title>Wiki Married Admin | AddBlog</title>
+{% endblock %}
+{% block admin_content %}
+<div class="container">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {{}}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -16,7 +16,7 @@
 
 {% extends 'admins/index.html'%}
 {% block title%}
-<title>Wiki Married Admin | Dashboard</title>
+<title>Wiki Married Admin | Bloglist</title>
 {% endblock %}
 {% block admin_content %}
   <!-- Content Wrapper. Contains page content -->
@@ -26,12 +26,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>jsGrid</h1>
+            <h1>Blog List</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">jsGrid</li>
+              <li class="breadcrumb-item active">Blog list</li>
             </ol>
           </div>
         </div>
@@ -42,46 +42,30 @@
     <section class="content">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">jsGrid</h3>
+          <h3 class="card-title">Blog List</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body" style="overflow-x: auto;">
           <table class="table table-bordered" style="min-width: 500px;">
             <tr>
+              <th>S.N.</th>
                 <th>Blog Title</th>
-                <th>Url Title</th>
+              
                 <th>Blog Author</th>
-                <th>DOD</th>
-                <th>Net Worth</th>
-                <th>Height</th>
-                <th>Married</th>
-                <th>Blog Description</th>
-                <th>Published Date</th>
-                <th>File Name</th>
+              
                 <th>Categories</th>
-                <th>Page Title</th>
-                <th>Visitor</th>
-                <th>Meta Keyword</th>
-                <th>Meta Description</th>
+                
                 <th>Action</th>
             </tr>
-            {% for b in blog%}
+            {% for b in  page_obj%}
             <tr>
+              <td>{{ page_obj.start_index|add:forloop.counter0 }}</td>
                 <td>{{b.blog_title}}</td>
-                <td>{{b.urltitle}}</td>
+                
                 <td>{{b.blog_author}}</td>
-                <td>{{b.date_of_birth}}</td>
-                <td>{{b.networth}}</td>
-                <td>{{b.height}}</td>
-                <td>{{b.married}}</td>
-                <td>{{b.blog_description}}</td>
-                <td>{{b.blog_published_date}}</td>
-                <td>{{b.filename}}</td>
+             
+         
                 <td>{{b.categories}}</td>
-                <td>{{b.pagetitle}}</td>
-                <td>{{b.visitor}}</td>
-                <td>{{b.metakeyword}}</td>
-                <td>{{b.metadescription}}</td>
                 <td>
                     <i class="fas fa-pen-square" style="font-size: 30px;"></i>
                     &nbsp; 
@@ -91,7 +75,7 @@
             {% endfor %}
           </table>
 
-          <div class="pagination">
+          <!-- <div class="pagination">
             <span class="step-links">
                 {% for i in page_range %}
                 <a href="?page={{ i }}">{{ i }}</a>
@@ -102,7 +86,26 @@
                     </span>
                 </p>
             </span>
-        </div>
+        </div> -->
+
+        <div class="pagination">
+          <span class="step-links">
+          {% if page_obj.has_previous %}
+              <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+          {% endif %}
+  
+          {% for num in page_obj.paginator.page_range %}
+              {% if num == page_obj.number %}
+                  <span>{{ num }}</span>
+              {% else %}
+                  <a href="?page={{ num }}">{{ num }}</a>
+              {% endif %}
+          {% endfor %}
+  
+          {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}">Next</a>
+          {% endif %}
+          </span>
         </div>
         <!-- /.card-body -->
       </div>
