@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
     <title>WikiMarried</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assests/css/wiki.css">
-    <link rel="shortcut icon" href="assests/img/logo-small.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assests/css/wiki.css'%}">
+    <link rel="shortcut icon" href="{% static 'assests/img/logo-small.png'%}" type="image/x-icon">
 
     <!-- font awesome link -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -30,7 +32,7 @@
     <header>
         <nav class="flex justify-between items-center shadow-xl p-4">
             <div class="navlogo md:ml-8 lg:ml-20">
-                <img src="assests/img/logo-small.png" alt="navlogo" class="w-24 animate-bounce">
+                <img src="{% static 'assests/img/logo-small.png'%}" alt="navlogo" class="w-24 animate-bounce">
             </div>
             <div class="hidden md:block">
                 <ul class="flex justify-evenly text-sm">
@@ -80,7 +82,7 @@
     <footer class="bg-white py-4">
         <nav class="flex flex-col md:flex-row justify-between items-center">
             <div class="navlogo md:ms-28 my-4">
-                <img src="assests/img/logo-small.png" alt="navlogo" class="w-24 animate-bounce">
+                <img src="{% static 'assests/img/logo-small.png'%}" alt="navlogo" class="w-24 animate-bounce">
             </div>
             <ul class="flex flex-wrap pe-2 justify-evenly text-sm">
                 <li><a href="index.html" class="pe-2 hover:font-bold hover:text-red-700">Home</a></li>

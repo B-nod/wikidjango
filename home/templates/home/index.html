@@ -1,5 +1,5 @@
 {% extends 'layout.html'%}
-
+{% load static %}
 {% block main_content %}
 <main class="mb-16">
       
@@ -13,7 +13,7 @@
             <div class="grid md:grid-cols-0 lg:grid-cols-3 gap-5">
                 <!-- Main Article -->
                 <div class="md:col-span-0 lg:col-span-2 bg-white rounded-lg">
-                    <img src="assests/img/Kate Bock wiki.jpg" alt="Main Article Image"
+                    <img src="{% static 'assests/img/Kate Bock wiki.jpg'%}" alt="Main Article Image"
                         class="w-full h-72 object-cover rounded-lg mb-5">
                     <div class="text p-3">
                         <span
@@ -51,7 +51,7 @@
                         </div>
                     </form>
                     <div class="bg-white rounded-lg p-2 flex items-start space-x-4">
-                        <img src="assests/img/david charvet net worth.jpg" alt="Side Article Image"
+                        <img src="{% static 'assests/img/david charvet net worth.jpg'%}" alt="Side Article Image"
                             class="md:w-24 md:h-24 w-32 h-32 object-cover rounded-lg">
                         <div>
                             <span
@@ -70,7 +70,7 @@
                     </div>
                     <!-- Article 2 -->
                     <div class="bg-white rounded-lg p-4 flex items-start space-x-4">
-                        <img src="assests/img/david charvet net worth.jpg" alt="Side Article Image"
+                        <img src="{% static 'assests/img/david charvet net worth.jpg'%}" alt="Side Article Image"
                             class="md:w-24 md:h-24 w-32 h-32 object-cover rounded-lg">
                         <div>
                             <span
@@ -88,7 +88,7 @@
                     </div>
                     <!-- Article 3 -->
                     <div class="bg-white rounded-lg p-4 flex items-start space-x-4">
-                        <img src="assests/img/david charvet net worth.jpg" alt="Side Article Image"
+                        <img src="{% static 'assests/img/david charvet net worth.jpg'%}" alt="Side Article Image"
                             class="md:w-24 md:h-24 w-32 h-32 object-cover rounded-lg">
                         <div>
                             <span
@@ -118,7 +118,7 @@
                 <div class="flex-row flex-wrap flex justify-evenly lg:bg-gray-100 md:bg-white lg:p-4 md:p-0 rounded-lg">
                     <!-- Blog Post Item -->
                     <div class="w-full md:w-50 lg:w-80 bg-white rounded-lg col-span-1 mb-8 md:mb-0 shadow-lg">
-                        <img src="assests/img/wiki1.png" alt="Post Image"
+                        <img src="{% static 'assests/img/wiki1.png' %}" alt="Post Image"
                             class="w-full h-60 rounded-lg object-cover">
                         <div class="p-2">
                             <span
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                     <div class="w-full md:w-50 lg:w-80 bg-white rounded-lg col-span-1 md:my-8 lg:my-0 shadow-lg">
-                        <img src="assests/img/wiki2.png" alt="Post Image"
+                        <img src="{% static 'assests/img/wiki2.png' %}" alt="Post Image"
                             class="w-full h-60 rounded-lg object-cover">
                         <div class="p-2">
                             <span
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <div class="w-full md:w-50 lg:w-80 bg-white rounded-lg col-span-1  my-8 md:mb-0 shadow-lg">
-                        <img src="assests/img/wiki3.png" alt="Post Image"
+                        <img src="{% static 'assests/img/wiki3.png' %}" alt="Post Image"
                             class="w-full h-60 rounded-lg object-cover">
                         <div class="p-2">
                             <span
@@ -163,7 +163,7 @@
                         </div>
                     </div>
                     <div class="w-full md:w-50 lg:w-80 bg-white rounded-lg col-span-1 my-8 md:mb-0 shadow-lg">
-                        <img src="assests/img/wiki4.png" alt="Post Image"
+                        <img src="{% static 'assests/img/wiki4.png' %}" alt="Post Image"
                             class="w-full h-60 rounded-lg object-cover">
                         <div class="p-2">
                             <span
@@ -178,7 +178,7 @@
                         </div>
                     </div>
                     <div class="w-full md:w-50 lg:w-80 bg-white rounded-lg col-span-1 my-8 md:mb-0 shadow-lg">
-                        <img src="assests/img/wiki5.png" alt="Post Image"
+                        <img src="{% static 'assests/img/wiki5.png' %}" alt="Post Image"
                             class="w-full h-60 rounded-lg object-cover">
                         <div class="p-2">
                             <span
@@ -193,7 +193,7 @@
                         </div>
                     </div>
                     <div class="w-full md:w-50 lg:w-80 bg-white rounded-lg col-span-1 my-8 md:mb-0 shadow-lg">
-                        <img src="assests/img/wiki6.png" alt="Post Image"
+                        <img src="{% static 'assests/img/wiki6.png' %}" alt="Post Image"
                             class="w-full h-60 rounded-lg object-cover">
                         <div class="p-2">
                             <span
@@ -243,7 +243,7 @@
                 <!-- Repeat similar block for other popular posts -->
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
-                        <img src="assests/img/top1.png" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
+                        <img src="{% static 'assests/img/top1.png' %}" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
                         <div class="flex flex-col">
                             <a href="another.html">
                                 <h3 class="lg:text-sm md:text-base font-semibold hover:text-blue-700">Darren John Boyd Bio | Wiki | Married | Age | Net worth | Wife | Dating</h3>
@@ -255,7 +255,7 @@
                 </div>
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
-                        <img src="assests/img/top2.png" alt="Post Image" class="w-full  md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
+                        <img src="{% static 'assests/img/top2.png' %}" alt="Post Image" class="w-full  md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
                         <div class="flex flex-col">
                             <a href="another.html">
                                 <h3 class="lg:text-sm md:text-base font-semibold hover:text-blue-700">Darren John Boyd Bio | Wiki | Married | Age | Net worth | Wife | Dating</h3>
@@ -266,7 +266,7 @@
                 </div>
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
-                        <img src="assests/img/top3.png" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
+                        <img src="{% static 'assests/img/top3.png' %}" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
                         <div class="flex flex-col">
                             <a href="another.html">
                                 <h3 class="lg:text-sm md:text-base font-semibold hover:text-blue-700">Darren John Boyd Bio | Wiki | Married | Age | Net worth | Wife | Dating</h3>
@@ -277,7 +277,7 @@
                 </div>
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
-                        <img src="assests/img/top4.png" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
+                        <img src="{% static 'assests/img/top4.png' %}" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
                         <div class="flex flex-col">
                             <a href="another.html">
                                 <h3 class="lg:text-sm md:text-base font-semibold hover:text-blue-700">Darren John Boyd Bio | Wiki | Married | Age | Net worth | Wife | Dating</h3>
@@ -288,7 +288,7 @@
                 </div>
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
-                        <img src="assests/img/top1.png" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
+                        <img src="{% static 'assests/img/top1.png' %}" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
                         <div class="flex flex-col">
                             <a href="another.html">
                                 <h3 class="lg:text-sm md:text-base font-semibold hover:text-blue-700">Darren John Boyd Bio | Wiki | Married | Age | Net worth | Wife | Dating</h3>
@@ -299,7 +299,7 @@
                 </div>
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
-                        <img src="assests/img/top1.png" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
+                        <img src="{% static 'assests/img/top1.png' %}" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
                         <div class="flex flex-col">
                             <a href="another.html">
                                 <h3 class="lg:text-sm md:text-base font-semibold hover:text-blue-700">Darren John Boyd Bio | Wiki | Married | Age | Net worth | Wife | Dating</h3>
@@ -310,7 +310,7 @@
                 </div>
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
-                        <img src="assests/img/top1.png" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
+                        <img src="{% static 'assests/img/top1.png' %}" alt="Post Image" class="w-full md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-lg">
                         <div class="flex flex-col">
                             <a href="another.html">
                                 <h3 class="lg:text-sm md:text-base font-semibold hover:text-blue-700">Darren John Boyd Bio | Wiki | Married | Age | Net worth | Wife | Dating</h3>
