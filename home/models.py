@@ -23,6 +23,18 @@ class Adds(models.Model):
         managed = False
         db_table = 'adds'
 
+class Cities(models.Model):
+    title = models.CharField(max_length=250)
+    category_title = models.CharField(max_length=250)
+    pagetitle = models.TextField()
+    pagekeyword = models.TextField()
+    pagedescription = models.TextField()
+    weight = models.IntegerField()
+
+    class Meta:
+        managed = True
+        db_table = 'cities'
+
 
 class Blog(models.Model):
     blog_title = models.TextField()
@@ -35,28 +47,17 @@ class Blog(models.Model):
     blog_description = models.TextField()
     blog_published_date = models.DateTimeField(db_column='blog_published_Date')  # Field name made lowercase.
     filename = models.TextField()
-    categories = models.TextField()
+    categories = models.ForeignKey(Cities, on_delete=models.CASCADE)
     pagetitle = models.TextField(db_column='pageTitle')  # Field name made lowercase.
     visitor = models.IntegerField()
     metakeyword = models.TextField(db_column='metaKeyword')  # Field name made lowercase.
     metadescription = models.TextField(db_column='metaDescription')  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'blog'
 
 
-class Cities(models.Model):
-    title = models.CharField(max_length=250)
-    category_title = models.CharField(max_length=250)
-    pagetitle = models.TextField()
-    pagekeyword = models.TextField()
-    pagedescription = models.TextField()
-    weight = models.IntegerField()
-
-    class Meta:
-        managed = False
-        db_table = 'cities'
 
 
 class Comment(models.Model):
