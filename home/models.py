@@ -30,10 +30,14 @@ class Cities(models.Model):
     pagekeyword = models.TextField()
     pagedescription = models.TextField()
     weight = models.IntegerField()
+    
 
     class Meta:
         managed = True
         db_table = 'cities'
+
+    def __str__(self):
+        return self.title
 
 
 class Blog(models.Model):
@@ -45,8 +49,8 @@ class Blog(models.Model):
     height = models.TextField()
     married = models.TextField()
     blog_description = models.TextField()
-    blog_published_date = models.DateTimeField(db_column='blog_published_Date')  # Field name made lowercase.
-    filename = models.TextField()
+    blog_published_date = models.DateTimeField(db_column='blog_published_Date', auto_now_add=True, null=True)  # Field name made lowercase.
+    filename = models.FileField(upload_to='static/uploads', null=True)
     categories = models.ForeignKey(Cities, on_delete=models.CASCADE)
     pagetitle = models.TextField(db_column='pageTitle')  # Field name made lowercase.
     visitor = models.IntegerField()
