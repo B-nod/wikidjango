@@ -29,7 +29,7 @@
 
 <body>
 
-    <header class="shadow-xl  p-4 bg-nav-color">
+    <header class="shadow-lg bg-nav-color p-4 sticky top-0 z-10">
         <nav class="flex justify-between items-center  max-w-screen-xl mx-auto">
             <div class="navlogo md:ml-8 lg:ml-20 ">
                 <img src="{% static 'assests/img/logo-small.png'%}" alt="navlogo" class="w-24 animate-bounce">
@@ -55,20 +55,20 @@
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <ul class="text-sm ps-2 pt-4 sidebar">
+        <div id="mobile-menu" class="hidden md:hidden bg-nav-color">
+            <ul class="text-sm ps-2 pt-4 sidebar bg-nav-color">
                 <a href="#" onclick="hideNavbar()" class="absolute top-2 right-2" id="times">
                     <i class="fas fa-times-square"></i>
                 </a>
-                <li><a href="{% url 'homepage' %}" class="p-3 inline-block font-bold text-red-700">Home</a></li>
-                <li><a href="celebrity.html" class="p-3 inline-block">Celebrity Gossip</a></li>
-                <li><a href="entertainment.html" class="p-3 inline-block">Entertainment</a></li>
-                <li><a href="net.html" class="p-3 inline-block">Net Worth</a></li>
-                <li><a href="salary.html" class="p-3 inline-block">Salary</a></li>
-                <li><a href="wiki.html" class="p-3 inline-block">Wiki</a></li>
-                <li><a href="biography.html" class="p-3 inline-block">Biography</a></li>
-                <li><a href="about.html" class="p-3 inline-block">About</a></li>
-                <li><a href="contact.html" class="p-3 inline-block">Contact</a></li>
+                <li><a href="{% url 'homepage' %}" class="p-3 block hover:underline font-semibold text-fcolor">Home</a></li>
+                <li><a href="celebrity.html" class="p-3 block hover:underline font-semibold  text-fcolor">Celebrity Gossip</a></li>
+                <li><a href="entertainment.html" class="p-3 block font-semibold  text-fcolor">Entertainment</a></li>
+                <li><a href="net.html" class="p-3 block font-semibold  text-fcolor">Net Worth</a></li>
+                <li><a href="salary.html" class="p-3 block font-semibold  text-fcolor">Salary</a></li>
+                <li><a href="wiki.html" class="p-3 block font-semibold  text-fcolor">Wiki</a></li>
+                <li><a href="biography.html" class="p-3 block font-semibold  text-fcolor">Biography</a></li>
+                <li><a href="about.html" class="p-3 block font-semibold  text-fcolor">About</a></li>
+                <li><a href="contact.html" class="p-3 block font-semibold  text-fcolor">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -79,31 +79,31 @@
    {% endblock %}
 
     <!-- footer part -->
-    <footer class="bg-white py-4">
-        <nav class="flex flex-col md:flex-row justify-between items-center">
+    <footer class="bg-nav-color p-4 max-w-screen-xl mx-auto">
+        <nav class="flex flex-col md:flex-row justify-between items-center ">
             <div class="navlogo md:ms-28 my-4">
                 <img src="{% static 'assests/img/logo-small.png'%}" alt="navlogo" class="w-24 animate-bounce">
             </div>
-            <ul class="flex flex-wrap pe-2 justify-evenly ">
-                <li><a href="index.html" class="pe-2 text-fcolor hover:font-bold hover:text-red-700">Home</a></li>
-                <li><a href="celebrity.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Celebrity Gossip</a></li>
-                <li><a href="entertainment.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Entertainment</a></li>
-                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Net Worth</a></li>
-                <li><a href="salary.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Salary</a></li>
-                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Wiki</a></li>
-                <li><a href="biography.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Biography</a></li>
-                <li><a href="about.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">About</a></li>
-                <li><a href="contact.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Contact</a></li>
+            <ul class="flex justify-evenly text-sm tracking-wide">
+                <li><a href="index.html" class="pr-5 hover:underline font-semibold  text-fcolor">Home</a></li>
+                <li><a href="celebrity.html" class="pr-5 hover:underline font-semibold  text-fcolor">Celebrity Gossip</a></li>
+                <li><a href="entertainment.html" class="pr-5 hover:underline font-semibold  text-fcolor">Entertainment</a></li>
+                <li><a href="net.html" class="pr-5 hover:underline font-semibold  text-fcolor">Net Worth</a></li>
+                <li><a href="salary.html" class="pr-5 hover:underline font-semibold  text-fcolor">Salary</a></li>
+                <li><a href="wiki.html" class="pr-5 hover:underline font-semibold  text-fcolor">Wiki</a></li>
+                <li><a href="biography.html" class="pr-5 hover:underline font-semibold  text-fcolor">Biography</a></li>
+                <li><a href="about.html" class="pr-5 hover:underline font-semibold  text-fcolor">About</a></li>
+                <li><a href="contact.html" class="lg:pr-20 md:pr-5 hover:underline font-semibold  text-fcolor">Contact</a></li>
             </ul>
         </nav>
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-3">
-            <p class="text-gray-600 text-sm m-5 md:ms-20 text-center md:text-left">&copy; 2023 All Rights Reserved. | <a href="#" class="text-gray-600 hover:text-gray-800">Disclaimer</a> | <a href="#" class="text-gray-600 hover:text-gray-800">Copyright Terms & Conditions</a></p>
+            <p class="text-fcolor font-semibold text-sm m-5 md:ms-20 text-center md:text-left">&copy; 2023 All Rights Reserved. | <a href="#" class="text-fcolor font-semibold hover:text-gray-800">Disclaimer</a> | <a href="#" class="text-fcolor font-semibold hover:text-gray-800">Copyright Terms & Conditions</a></p>
 
-            <p class="text-gray-600 text-sm m-5 md:ms-20 text-center md:text-left">By using our website, you agree to our <a href="#" class="text-gray-600 hover:text-gray-800">Terms of Use</a> and <a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+            <p class="text-fcolor font-semibold text-sm m-5 md:ms-20 text-center md:text-left">By using our website, you agree to our <a href="#" class="text-fcolor font-semibold hover:text-gray-800">Terms of Use</a> and <a href="#" class="text-fcolor font-semibold hover:text-gray-800">Privacy Policy</a>
                 <br>
-                Powered solely by code. Crafted by <a href="#" class="text-gray-600 hover:text-gray-800">Creative Content Limited</a>
+                Powered solely by code. Crafted by <a href="#" class="text-fcolor font-semibold hover:text-gray-800">Creative Content Limited</a>
                 <br>
-                Designed by: <a href="#" class="text-gray-600 font-bold hover:text-gray-800">Binod Tamang</a>
+                Designed by: <a href="#" class="text-fcolor font-semibold font-bold hover:text-gray-800">Binod Tamang</a>
             </p>
         </div>
     </footer>
@@ -128,10 +128,15 @@
           theme: {
             extend: {
               colors: {
-                'nav-color': '#f6ffef',
-                'fcolor': '#f58882',
+                'nav-color': '#f5f5f0',
+                'fcolor': '#e07a70',
                 'bgcolor':'#e9f5e9',
               },
+              backgroundImage: {
+        'gradient-body-green': 'linear-gradient(to right, #f58882, #fad2cc)',
+        'gradient-body-blue': 'linear-gradient(to right, #e0f0f9, #f5f5f0)',
+        'gradient-body-gray': 'linear-gradient(to right, #f0f0f0, #f5f5f0)',
+      },
               fontSize: {
                 'lg': '1.125rem', // Adjust to your needs
             },

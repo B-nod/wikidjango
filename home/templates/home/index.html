@@ -10,26 +10,26 @@
 {% extends 'layout.html'%}
 {% load static %}
 {% block main_content %}
-<main class="mb-16 max-w-screen-xl mx-auto bg-bgcolor">
+<main class="mb-16 max-w-screen-xl mx-auto z-0">
       
     <!-- gossip part -->
     <div class="container mx-auto py-5 px-4 md:px-24">
         <!-- Recent Update Section -->
         <div class="mb-8">
-            <h1 class="text-3xl font-bold mb-5">Recent Update</h1>
+            <h1 class="text-3xl font-bold mb-5 text-fcolor">Recent Update</h1>
             
           
-            <div class="grid md:grid-cols-0 lg:grid-cols-3 gap-5">
+            <div class="grid md:grid-cols-0 lg:grid-cols-3 gap-5 ">
                 <!-- Main Article -->
                  {% for r in recent%}
-                <div class="md:col-span-0 lg:col-span-2 bg-white rounded-lg">
+                <div class="md:col-span-0 lg:col-span-2 rounded-lg bg-gray-100">
                     <img src="{{r.filename}}" alt="Main Article Image"
-                        class="w-full h-72 object-contain rounded-lg mb-5">
+                        class="w-full h-80 object-contain rounded-lg mb-5">
                     <div class="text p-3">
                         <span
                             class="text-blue-700 text-lg md:text-xs font-semibold mb-5 bg-blue-100 px-3 py-2 rounded-full tracking-wide">{{r.categories}}</span>
                         <a href="another.html">
-                            <h2 class="text-2xl font-semibold my-3 hover:text-blue-700">{{r.blog_title|safe}}</h2>
+                            <h2 class="text-2xl font-semibold my-3 hover:text-blue-700 " >{{r.blog_title|safe}}</h2>
                         </a>
                         <p class="text-gray-700 mb-3 text-justify md:text-sm" id="des">{{r.blog_description|truncatewords:150|safe }} &nbsp;<a href="another.html"><span
                                     class="transition-colors duration-300 delay-150 hover:duration-300 text-green-600 text-sm font-semibold mb-3 rounded-full hover:text-purple-500 tracking-wide">Continue
@@ -44,19 +44,19 @@
                 <div class="space-y-6">
                    
                     <!-- Article 1 -->
-                    <form class="max-w-md mx-auto">   
+                    <form class="max-w-md mx-auto z-0">   
                         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                        <div class="relative">
+                        <div class="relative z-0">
                             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                 <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                 </svg>
                             </div>
-                            <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search your favorite celebrity " required />
+                            <input type="search" id="default-search" class="block z-0 w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search your favorite celebrity " required />
                             <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                         </div>
                     </form>
-                    <div class="bg-white rounded-lg p-2 flex items-start space-x-4">
+                    <div class="rounded-lg p-4 flex items-start space-x-4 bg-gray-100">
                         <img src="{% static 'assests/img/david charvet net worth.jpg'%}" alt="Side Article Image"
                             class="md:w-24 md:h-24 w-32 h-32 object-cover rounded-lg">
                         <div>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <!-- Article 2 -->
-                    <div class="bg-white rounded-lg p-4 flex items-start space-x-4">
+                    <div class="rounded-lg p-4 flex items-start space-x-4 bg-gray-100">
                         <img src="{% static 'assests/img/david charvet net worth.jpg'%}" alt="Side Article Image"
                             class="md:w-24 md:h-24 w-32 h-32 object-cover rounded-lg">
                         <div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <!-- Article 3 -->
-                    <div class="bg-white rounded-lg p-4 flex items-start space-x-4">
+                    <div class=" rounded-lg p-4 flex items-start space-x-4 bg-gray-100">
                         <img src="{% static 'assests/img/david charvet net worth.jpg'%}" alt="Side Article Image"
                             class="md:w-24 md:h-24 w-32 h-32 object-cover rounded-lg">
                         <div>
@@ -120,7 +120,7 @@
         <div class="grid md:grid-cols-0 lg:grid-cols-3 gap-8">
             <!-- All Blog Posts -->
             <div class="md:col-span-2">
-                <h2 class="text-2xl font-bold mb-4">All Blog Posts</h2>
+                <h2 class="text-2xl font-bold mb-4 text-fcolor">All Blog Posts</h2>
                 <div class="flex-row flex-wrap flex justify-evenly lg:bg-gray-100 md:bg-white lg:p-4 md:p-0 rounded-lg">
                     <!-- Blog Post Item -->
                     <div class="w-full md:w-50 lg:w-80 bg-white rounded-lg col-span-1 mb-8 md:mb-0 shadow-lg">
@@ -245,7 +245,7 @@
             <!-- Sidebar -->
 
             <div class="sidebar ">
-                <h2 class="text-2xl font-bold mb-4">Top Article</h2>
+                <h2 class="text-2xl font-bold mb-4 text-fcolor">Top Article</h2>
                 <!-- Repeat similar block for other popular posts -->
                 <div class="w-full md:w-120 mb-8 lg:mt-8">
                     <div class="flex flex-col md:flex-row items-start md:space-x-4 space-y-4 md:space-y-0">
