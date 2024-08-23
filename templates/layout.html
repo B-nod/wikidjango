@@ -29,22 +29,22 @@
 
 <body>
 
-    <header class="shadow-xl  p-4">
+    <header class="shadow-xl  p-4 bg-nav-color">
         <nav class="flex justify-between items-center  max-w-screen-xl mx-auto">
             <div class="navlogo md:ml-8 lg:ml-20 ">
                 <img src="{% static 'assests/img/logo-small.png'%}" alt="navlogo" class="w-24 animate-bounce">
             </div>
             <div class="hidden md:block">
-                <ul class="flex justify-evenly text-sm">
-                    <li><a href="index.html" class="pr-5 hover:font-bold hover:text-red-700">Home</a></li>
-                    <li><a href="celebrity.html" class="pr-5 hover:font-bold hover:text-red-700">Celebrity Gossip</a></li>
-                    <li><a href="entertainment.html" class="pr-5 hover:font-bold hover:text-red-700">Entertainment</a></li>
-                    <li><a href="net.html" class="pr-5 hover:font-bold hover:text-red-700">Net Worth</a></li>
-                    <li><a href="salary.html" class="pr-5 hover:font-bold hover:text-red-700">Salary</a></li>
-                    <li><a href="wiki.html" class="pr-5 hover:font-bold hover:text-red-700">Wiki</a></li>
-                    <li><a href="biography.html" class="pr-5 hover:font-bold hover:text-red-700">Biography</a></li>
-                    <li><a href="about.html" class="pr-5 hover:font-bold hover:text-red-700">About</a></li>
-                    <li><a href="contact.html" class="lg:pr-20 md:pr-5 hover:font-bold hover:text-red-700">Contact</a></li>
+                <ul class="flex justify-evenly text-sm tracking-wide">
+                    <li><a href="index.html" class="pr-5 hover:underline font-semibold  text-fcolor">Home</a></li>
+                    <li><a href="celebrity.html" class="pr-5 hover:underline font-semibold  text-fcolor">Celebrity Gossip</a></li>
+                    <li><a href="entertainment.html" class="pr-5 hover:underline font-semibold  text-fcolor">Entertainment</a></li>
+                    <li><a href="net.html" class="pr-5 hover:underline font-semibold  text-fcolor">Net Worth</a></li>
+                    <li><a href="salary.html" class="pr-5 hover:underline font-semibold  text-fcolor">Salary</a></li>
+                    <li><a href="wiki.html" class="pr-5 hover:underline font-semibold  text-fcolor">Wiki</a></li>
+                    <li><a href="biography.html" class="pr-5 hover:underline font-semibold  text-fcolor">Biography</a></li>
+                    <li><a href="about.html" class="pr-5 hover:underline font-semibold  text-fcolor">About</a></li>
+                    <li><a href="contact.html" class="lg:pr-20 md:pr-5 hover:underline font-semibold  text-fcolor">Contact</a></li>
                 </ul>
             </div>
             <div class="md:hidden">
@@ -84,16 +84,16 @@
             <div class="navlogo md:ms-28 my-4">
                 <img src="{% static 'assests/img/logo-small.png'%}" alt="navlogo" class="w-24 animate-bounce">
             </div>
-            <ul class="flex flex-wrap pe-2 justify-evenly text-sm">
-                <li><a href="index.html" class="pe-2 hover:font-bold hover:text-red-700">Home</a></li>
-                <li><a href="celebrity.html" class="pe-2 hover:font-bold hover:text-red-700">Celebrity Gossip</a></li>
-                <li><a href="entertainment.html" class="pe-2 hover:font-bold hover:text-red-700">Entertainment</a></li>
-                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700">Net Worth</a></li>
-                <li><a href="salary.html" class="pe-2 hover:font-bold hover:text-red-700">Salary</a></li>
-                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700">Wiki</a></li>
-                <li><a href="biography.html" class="pe-2 hover:font-bold hover:text-red-700">Biography</a></li>
-                <li><a href="about.html" class="pe-2 hover:font-bold hover:text-red-700">About</a></li>
-                <li><a href="contact.html" class="pe-2 hover:font-bold hover:text-red-700">Contact</a></li>
+            <ul class="flex flex-wrap pe-2 justify-evenly ">
+                <li><a href="index.html" class="pe-2 text-fcolor hover:font-bold hover:text-red-700">Home</a></li>
+                <li><a href="celebrity.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Celebrity Gossip</a></li>
+                <li><a href="entertainment.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Entertainment</a></li>
+                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Net Worth</a></li>
+                <li><a href="salary.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Salary</a></li>
+                <li><a href="net.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Wiki</a></li>
+                <li><a href="biography.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Biography</a></li>
+                <li><a href="about.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">About</a></li>
+                <li><a href="contact.html" class="pe-2 hover:font-bold hover:text-red-700 text-fcolor">Contact</a></li>
             </ul>
         </nav>
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-3">
@@ -123,6 +123,42 @@
             mobileMenu.classList.add('hidden');
         })
     </script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'nav-color': '#f6ffef',
+                'fcolor': '#f58882',
+                'bgcolor':'#e9f5e9',
+              },
+              fontSize: {
+                'lg': '1.125rem', // Adjust to your needs
+            },
+            fontWeight: {
+                'semibold': 600,
+            },
+            letterSpacing: {
+                'normal': '0',
+                'wide': '0.05em',
+            },
+            }
+          },
+          plugins: [
+        function({ addUtilities }) {
+            addUtilities({
+                '.font-smooth': {
+                    '-webkit-font-smoothing': 'antialiased',
+                    '-moz-osx-font-smoothing': 'grayscale',
+                },
+                '.text-render': {
+                    'text-rendering': 'optimizeLegibility',
+                },
+            });
+        },
+    ],
+        }
+      </script>
 </body>
 
 </html>
